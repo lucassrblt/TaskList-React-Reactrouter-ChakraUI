@@ -74,7 +74,7 @@ export default function Dashboard() {
 }
 
 export const tasksLoader = async () => { // Permet de récupérer les données et de simuler un appel a une api
-  const res = await fetch(' http://localhost:3000/tasks')
+  const res = await fetch('https://taklist-api.onrender.com/tasks')
 
   return res.json()
 }
