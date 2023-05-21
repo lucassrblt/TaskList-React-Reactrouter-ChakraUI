@@ -1,15 +1,32 @@
-import { Flex, Box, Heading, Button, Text, Spacer, HStack } from "@chakra-ui/react";
+import { UnlockIcon } from "@chakra-ui/icons";
+import { Flex, Box, Heading, Button, Text, Spacer, HStack, useToast, Avatar } from "@chakra-ui/react";
 
 export default function Navbar () {
+    const toast = useToast()
+
+    const showToast = () => { {/* Fonctions permettant de créer un petit overlay */}
+        toast({
+            title: 'Logged out',
+            description: 'Successfully logged out',
+            duration: 3000,
+            isClosable: true, // Ajoute ou non un croix sur l'overlay
+            status: 'success', // Change le background color en vert
+            position: 'top',
+            icon: <UnlockIcon></UnlockIcon>
+        })
+    }
+
+
+
     return (
         <Flex as="nav" mb='40px' p='10px' alignItems='center'> {/* Ici on utilise un élément flex pour utiliser les felxbox mais on le transmet comme un élément nav */}
-            <Heading as="h1">Dojo Tasks</Heading> {/* Ici on utilise l'élément heading qui se transmet comme un h2 mais on mle transforme en h1 */}
+            <Heading as="h1">Lucas's Tasks</Heading> {/* Ici on utilise l'élément heading qui se transmet comme un h2 mais on mle transforme en h1 */}
             <Spacer /> {/* Permet de créer un espace entre les différents composants */}
 
         <HStack spacing='20px'> {/* Permet de créer un conteneur qui empile les enfants horizontalement, puis on leur ajoute un spacing */}
-            <Box bg='gray.200' p='10px'>M</Box>
+            <Avatar src="/img/IMG_1026.JPG"/>
             <Text>lucasrblt@outlook.com</Text>
-            <Button colorScheme="green">Logout</Button> {/* Créer un composant boutton prédéfini par chakra, colorscheme est une propriété de chakra qui permet d'utiliser des couleurs prédéfini avec un hover et un onclick */}
+            <Button colorScheme="green" onClick={showToast}>Logout</Button> {/* Créer un composant boutton prédéfini par chakra, colorscheme est une propriété de chakra qui permet d'utiliser des couleurs prédéfini avec un hover et un onclick */}
         </HStack>
         </Flex>
 

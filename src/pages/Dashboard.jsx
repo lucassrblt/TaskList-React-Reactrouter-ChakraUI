@@ -1,5 +1,5 @@
 import { EditIcon, ViewIcon } from "@chakra-ui/icons";
-import { Divider, Box, Card, CardBody, CardFooter, CardHeader, Container, Heading, SimpleGrid, Text, Flex, HStack, Button } from "@chakra-ui/react"; // Lorsque que l'on utilise un composant de chakra ui toujours l'importer
+import { Divider, Box, Card, CardBody, CardFooter, CardHeader, Container, Heading, SimpleGrid, Text, Flex, HStack, Button, Avatar } from "@chakra-ui/react"; // Lorsque que l'on utilise un composant de chakra ui toujours l'importer
 import { useLoaderData } from "react-router-dom"
 
 
@@ -27,7 +27,7 @@ export default function Dashboard() {
           <CardHeader>
             <Flex gap={5}>
               <Box w="50px" h='50px'>
-                <Text>AV</Text>
+                <Avatar src={task.img}></Avatar>
               </Box>
               <Box>
                 <Heading as='h3' size='sm'>{task.title}</Heading> {/* size sm correspond à une taille prédéfinit par chakra */}
