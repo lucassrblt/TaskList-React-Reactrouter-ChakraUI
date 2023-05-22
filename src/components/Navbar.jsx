@@ -26,7 +26,7 @@ export default function Navbar () {
         <HStack spacing='20px'> {/* Permet de créer un conteneur qui empile les enfants horizontalement, puis on leur ajoute un spacing */}
             <Avatar src="/img/IMG_1026.JPG"/>
             <Text>lucasrblt@outlook.com</Text>
-            <Button colorScheme="green" onClick={showToast}>Logout</Button> {/* Créer un composant boutton prédéfini par chakra, colorscheme est une propriété de chakra qui permet d'utiliser des couleurs prédéfini avec un hover et un onclick */}
+            <Button colorScheme="red" onClick={showToast}>Logout</Button> {/* Créer un composant boutton prédéfini par chakra, colorscheme est une propriété de chakra qui permet d'utiliser des couleurs prédéfini avec un hover et un onclick */}
         </HStack>
         </Flex>
 

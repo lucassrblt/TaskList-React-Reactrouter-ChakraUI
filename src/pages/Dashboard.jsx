@@ -74,7 +74,6 @@ export default function Dashboard() {
 }
 
 export const tasksLoader = async () => { // Permet de récupérer les données et de simuler un appel a une api
-  const res = await fetch('https://taklist-api.onrender.com/tasks')
-
+  const res = await fetch('https://tasklist-api-production.up.railway.app/tasks')
   return res.json()
 }
